@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>6</title>
+</head>
+
+<body>
+    <label for="num1">num1:</label><br>
+    <input type="text" id="num1"><br>
+    <label for="num2">num1:</label><br>
+    <input type="text" id="num2"><br>
+    <p id="result"></p>
+    <script>
+
+        const a  =document.getElementById("num1").innerHTML;
+        const b  =document.getElementById("num2").innerHTML;
+        try{const gcd = (a, b) => {
+            let max,
+                min,
+                r = 1;
+            max = a;
+            min = b;
+            while (r != 0) {
+                r = max % min;
+                max = min;
+                min = r;
+            }
+            return max;
+        };}
+        catch(error){
+            console.log(error)
+        }
+        
+        
+    </script>
+</body>
+
+</html>

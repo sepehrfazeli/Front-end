@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>taamol</title>
+</head>
+<body>
+    <div>
+        <p>What are doing now?</p>
+        <textarea name="wd" id="wd" cols="30" rows="3" onchange=""></textarea><br>
+        <button id="send_button">Send</button>
+        <a href="#">sign out</a><br><br>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.5.min.js"></script>
+    <script>
+        $("#send_button").click(()=>{
+            console.log($("#wd").val())
+            $("<div />").html($("#wd").val()).appendTo("#sent");
+        })
+    </script>
+    <div id="sent" style="font-style:italic">
+        <div id="sent_message">Sent message appeare here:</div><br>
+    </div>
+</body>
+</html>
